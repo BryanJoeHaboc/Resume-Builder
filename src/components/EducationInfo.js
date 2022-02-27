@@ -3,23 +3,31 @@ import { Component } from "react";
 export default class EducationInfo extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      firstName: "",
-      lastName: "",
-      title: "",
-      address: "",
-      email: "",
-      number: "",
-    };
+    // school: "",
+    // degree: "",
+    // schoolDateStarted: "",
+    // schoolDateEnded: "",
   }
 
   render() {
     return (
       <div className="edit-view-education-info-container">
-        <input type={"text"} placeholder={"University/School Name"} />
-        <input type={"text"} placeholder={"Degree"} />
-        <input type={"text"} placeholder={"Year Started"} />
-        <input type={"text"} placeholder={"Year Ended"} />
+        <input
+          id={"school"}
+          type={"text"}
+          placeholder={"University/School Name"}
+        />
+        <input id={"degree"} type={"text"} placeholder={"Degree"} />
+        <input
+          id={"schoolDateStarted"}
+          type={"text"}
+          placeholder={"Year Started"}
+        />
+        <input
+          id={"schoolDateEnded"}
+          type={"text"}
+          placeholder={"Year Ended"}
+        />
       </div>
     );
   }
