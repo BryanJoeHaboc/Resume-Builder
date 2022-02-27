@@ -2,6 +2,11 @@
   display: flex;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
 :root {
   font-size: 10px;
 }
@@ -10,9 +15,58 @@
   margin-bottom: 100px;
 }
 
+.resume-view-container {
+  /* 8.5 x 11 inch= 2550px x 3300px niratio ko lang para extact yung itsura */
+  width: 60rem;
+  height: 77.6rem;
+}
+
+.resume-view-container .resume-view-body {
+  display: flex;
+  /* background-color: blue; */
+  height: 80%;
+}
+
+.resume-view-container .resume-view-header {
+  background-color: #3545a7;
+  border: solid 2px;
+  color: white;
+  height: 20%;
+}
+
+.resume-view-container .resume-view-body .resume-view-sidebar {
+  background-color: #021691;
+  border-left: solid 1px;
+  border-bottom: solid 1px;
+  width: 33%;
+}
+.resume-view-container .resume-view-body .resume-view-main-body {
+  border-left: solid 1px;
+  border-right: solid 1px;
+  border-bottom: solid 1px;
+  width: 67%;
+}
+
 .edit-view-user-info-container,
-.edit-view-education-info-container {
+.edit-view-education-info-container,
+.resume-view-container {
   display: flex;
   flex-direction: column;
   margin: 2rem;
+}
+
+.resume-heading-container {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  gap: 6rem;
+  height: 100%;
+}
+
+.resume-heading-container img {
+  margin-left: 4rem;
+}
+
+.resume-heading-container p {
+  font-weight: 600;
 }

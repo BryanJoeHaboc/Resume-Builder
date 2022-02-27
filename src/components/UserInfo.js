@@ -1,24 +1,20 @@
 import { Component } from "react";
 
 export default class UserInfo extends Component {
-  constructor(props) {
-    super(props);
-
-    // firstName: "hey",
-    // lastName: "",
-    // title: "",
-    // address: "",
-    // email: "",
-    // number: "",
-  }
-
   render() {
+    const firstName = this.props.state.firstName;
+    const lastName = this.props.state.lastName;
+    const title = this.props.state.title;
+    const address = this.props.state.address;
+    const email = this.props.state.email;
+    const number = this.props.state.number;
+
     return (
       <div className="edit-view-user-info-container">
         <input
           id={"firstName"}
-          onChange={this.props.onChange}
           type={"text"}
+          onChange={this.props.onChange}
           placeholder={"First Name"}
         />
         <input
@@ -46,7 +42,7 @@ export default class UserInfo extends Component {
           placeholder={"Email"}
         />
         <input
-          id={"phoneNumber"}
+          id={"number"}
           onChange={this.props.onChange}
           type={"text"}
           placeholder={"Phone Number"}
