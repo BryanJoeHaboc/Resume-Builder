@@ -24,6 +24,7 @@ class App extends Component {
       degree: "",
       schoolDateStarted: "",
       schoolDateEnded: "",
+      workDescription: "",
       // Work Experience
       company: "",
       position: "",
@@ -50,6 +51,7 @@ class App extends Component {
       description: "",
       workDateStarted: "",
       workDateEnded: "",
+      workDescription: "",
     });
   }
 
@@ -71,6 +73,8 @@ class App extends Component {
       description: "Cupidatat in ex voluptate anim ipsum.",
       workDateStarted: "May 2018",
       workDateEnded: "Present",
+      workDescription:
+        "Amet culpa proident excepteur ea irure tempor minim anim magna commodo cillum. Elit veniam sit occaecat veniam magna enim sint deserunt et cupidatat est sint laborum adipisicing. Laborum mollit pariatur exercitation nostrud.",
     });
   }
 

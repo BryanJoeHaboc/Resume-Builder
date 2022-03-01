@@ -1,6 +1,8 @@
 import { Component } from "react";
 import ResumeHeading from "./ResumeHeading";
 import SideInformation from "./SideInformation";
+import WorkExperienceBody from "./WorkExperienceBody";
+import SchoolInfoBody from "./SchoolInfoBody";
 
 export default class Resume extends Component {
   render() {
@@ -14,7 +16,10 @@ export default class Resume extends Component {
           <div className="resume-view-sidebar">
             <SideInformation state={this.props.state} />
           </div>
-          <div className="resume-view-main-body"></div>
+          <div className="resume-view-main-body">
+            <WorkExperienceBody state={this.props.state} />
+            <SchoolInfoBody state={this.props.state} />
+          </div>
         </div>
       </div>
     );
