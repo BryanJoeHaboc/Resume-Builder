@@ -79,7 +79,7 @@ class App extends Component {
   }
 
   onChange(e) {
-    // console.log(this.state);
+    console.log(this.state);
     this.setState({ [e.target.id]: e.target.value });
   }
 
@@ -88,8 +88,8 @@ class App extends Component {
       <div className="App">
         <div className="edit-view-container">
           <UserInfo state={this.state} onChange={this.onChange} />
-          <EducationInfo state={this.state} />
-          <WorkExperience state={this.state} />
+          <EducationInfo state={this.state} onChange={this.onChange} />
+          <WorkExperience state={this.state} onChange={this.onChange} />
           <button className="reset-button" onClick={this.handleReset}>
             Reset
           </button>

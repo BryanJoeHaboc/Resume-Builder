@@ -17,10 +17,10 @@ export default class WorkExperience extends Component {
           placeholder={"Position"}
         />
         <input
-          id={"description"}
+          id={"workDescription"}
           onChange={this.props.onChange}
           type={"text"}
-          placeholder={"Description"}
+          placeholder={"Work Description"}
         />
         <input
           id={"workDateStarted"}

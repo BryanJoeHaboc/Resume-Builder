@@ -15,12 +15,17 @@ export default class Resume extends Component {
 
     return (
       <div className="resume-work-expi-container">
-        <h4 style={{ color: "grey" }}>Work Experience</h4>
+        {company && <h4 style={{ color: "grey" }}>Work Experience</h4>}
         <h1>{company}</h1>
         <p>
           <b>{position}</b>
         </p>
-        <p> {workDateStarted + "-" + workDateEnded}</p>
+        <p>
+          {" "}
+          {workDateEnded
+            ? workDateStarted + "-" + workDateEnded
+            : workDateStarted}
+        </p>
         <p>{workDescription}</p>
       </div>
     );

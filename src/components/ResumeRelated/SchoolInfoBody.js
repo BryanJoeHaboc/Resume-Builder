@@ -13,13 +13,22 @@ export default class Resume extends Component {
     const schoolDateEnded = this.props.state.schoolDateEnded;
 
     return (
-      <div className="resume-work-expi-container resume-educ-add-line-top">
-        <h4 style={{ color: "grey" }}>Educational Background</h4>
+      <div
+        className={`resume-educ-info-container ${
+          school && "resume-educ-add-line-top"
+        }`}
+      >
+        {school && <h4 style={{ color: "grey" }}>Educational Background</h4>}
         <h2>{school}</h2>
         <p>
           <b>{degree}</b>
         </p>
-        <p> {schoolDateStarted + "-" + schoolDateEnded}</p>
+        <p>
+          {" "}
+          {schoolDateEnded
+            ? schoolDateStarted + "-" + schoolDateEnded
+            : schoolDateStarted}
+        </p>
       </div>
     );
   }
