@@ -56,6 +56,8 @@ class App extends Component {
   }
 
   handleFillData() {
+    //NOTE: Add work and school experiences input. Make states automattically created;
+    // NOTE: Make profile picture disapper and replace a div saying 'Picture Here'
     console.log(this);
     this.setState({
       firstName: "Gary",
