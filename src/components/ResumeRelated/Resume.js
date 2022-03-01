@@ -1,5 +1,6 @@
 import { Component } from "react";
 import ResumeHeading from "./ResumeHeading";
+import SideInformation from "./SideInformation";
 
 export default class Resume extends Component {
   render() {
@@ -10,7 +11,9 @@ export default class Resume extends Component {
         </div>
 
         <div className="resume-view-body">
-          <div className="resume-view-sidebar"></div>
+          <div className="resume-view-sidebar">
+            <SideInformation state={this.props.state} />
+          </div>
           <div className="resume-view-main-body"></div>
         </div>
       </div>

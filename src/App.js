@@ -60,7 +60,7 @@ class App extends Component {
       lastName: "Thesnail",
       title: "Sr. Software Engineer",
       address: "212 William St #1 Oakdale, Louisiana(LA), 71463",
-      email: "gvalenciano@mydomain.com",
+      email: "gthesnail@mydomain.com",
       number: "09234567891",
       school: "Bikini Bottom Boating School ",
       degree: "Bachelor of Science in Electronics Engineering",
