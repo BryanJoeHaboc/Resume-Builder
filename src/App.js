@@ -1,5 +1,5 @@
 import "./App.css";
-import FormFields from "./components/form-fields/form-fields";
+import FormFields from "./components/form-fields/form-fields.components";
 import { Component } from "react";
 import Resume from "./components/resume-related/Resume";
 
@@ -79,7 +79,7 @@ class App extends Component {
   }
 
   onChange(e) {
-    console.log(this.state);
+    // console.log(this.state);
     this.setState({ [e.target.id]: e.target.value });
   }
 
