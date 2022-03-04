@@ -11,12 +11,19 @@
 :root {
   font-size: 10px;
 }
-
-.edit-view-container {
-  margin-bottom: 100px;
+.App {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 2rem;
 }
 
-.resume-view-container {
+.edit-view-container {
+  border: solid 1px;
+}
+
+.resume-view-container,
+.edit-view-container {
   /* 8.5 x 11 inch= 2550px x 3300px niratio ko lang para extact yung itsura */
   width: 60rem;
   height: 77.6rem;
@@ -54,7 +61,7 @@
 .resume-view-container {
   display: flex;
   flex-direction: column;
-  margin: 2rem;
+  /* margin: 2rem; */
 }
 
 .resume-heading-container {

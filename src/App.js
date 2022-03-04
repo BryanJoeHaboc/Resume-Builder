@@ -1,9 +1,7 @@
 import "./App.css";
-import EducationInfo from "./components/EducationInfo";
-import UserInfo from "./components/UserInfo";
-import WorkExperience from "./components/WorkExperience";
+import FormFields from "./components/form-fields/form-fields";
 import { Component } from "react";
-import Resume from "./components/ResumeRelated/Resume";
+import Resume from "./components/resume-related/Resume";
 
 class App extends Component {
   constructor(props) {
@@ -86,12 +84,49 @@ class App extends Component {
   }
 
   render() {
+    const educInfoInputFields = [
+      { school: "University/School Name" },
+      { degree: "Degree" },
+      { schoolDateStarted: "Year Started" },
+      { schoolDateEnded: "Year Ended" },
+    ];
+    const userInfoInputFields = [
+      { firstName: "First Name" },
+      { lastName: "Last Name" },
+      { title: "Title" },
+      { address: "Address" },
+      { email: "Email" },
+      { number: "Phone Number" },
+    ];
+    const workExperienceInputFields = [
+      { company: "Company Name" },
+      { position: "Position" },
+      { workDescription: "Work Description" },
+      { workDateStarted: "Date Started" },
+      { workDateEnded: "Date Ended" },
+    ];
+
     return (
       <div className="App">
         <div className="edit-view-container">
-          <UserInfo state={this.state} onChange={this.onChange} />
-          <EducationInfo state={this.state} onChange={this.onChange} />
-          <WorkExperience state={this.state} onChange={this.onChange} />
+          <FormFields
+            state={this.state}
+            onChange={this.onChange}
+            inputFields={userInfoInputFields}
+          />
+
+          <FormFields
+            state={this.state}
+            onChange={this.onChange}
+            inputFields={educInfoInputFields}
+          />
+
+          <FormFields
+            state={this.state}
+            onChange={this.onChange}
+            inputFields={workExperienceInputFields}
+          />
+
           <button className="reset-button" onClick={this.handleReset}>
             Reset
           </button>

@@ -1,11 +1,24 @@
 import { Component } from "react";
 
-export default class EducationInfo extends Component {
+export default class FormFields extends Component {
   render() {
-    const { onChange } = this.props;
+    const { onChange, inputFields } = this.props;
     return (
       <div className="edit-view-education-info-container">
-        <input
+        {inputFields.map((inputField) => {
+          const inputId = Object.keys(inputField).pop();
+          const inputPlaceholder = Object.values(inputField).pop();
+          return (
+            <input
+              key={inputId}
+              id={inputId}
+              onChange={onChange}
+              type={"text"}
+              placeholder={inputPlaceholder}
+            />
+          );
+        })}
+        {/* <input
           id={"school"}
           onChange={onChange}
           type={"text"}
@@ -28,7 +41,7 @@ export default class EducationInfo extends Component {
           onChange={onChange}
           type={"text"}
           placeholder={"Year Ended"}
-        />
+        /> */}
       </div>
     );
   }
