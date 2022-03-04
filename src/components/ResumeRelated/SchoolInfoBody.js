@@ -7,10 +7,8 @@ export default class Resume extends Component {
   }
 
   render() {
-    const school = this.props.state.school;
-    const degree = this.props.state.degree;
-    const schoolDateStarted = this.props.state.schoolDateStarted;
-    const schoolDateEnded = this.props.state.schoolDateEnded;
+    const { school, degree, schoolDateStarted, schoolDateEnded } =
+      this.props.state;
 
     return (
       <div

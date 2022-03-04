@@ -2,9 +2,7 @@ import { Component } from "react";
 
 export default class SideInformation extends Component {
   render() {
-    const address = this.props.state.address;
-    const number = this.props.state.number;
-    const email = this.props.state.email;
+    const { address, number, email } = this.props.state;
     return (
       <div className="resume-sidebar-container">
         {address && (

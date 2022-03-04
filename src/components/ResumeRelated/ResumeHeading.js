@@ -7,9 +7,7 @@ export default class Resume extends Component {
   }
 
   render() {
-    const lastName = this.props.state.lastName;
-    const firstName = this.props.state.firstName;
-    const title = this.props.state.title;
+    const { lastName, firstName, title } = this.props.state;
 
     return (
       <div className="resume-heading-container">

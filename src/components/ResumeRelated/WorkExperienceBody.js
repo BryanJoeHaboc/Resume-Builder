@@ -7,11 +7,13 @@ export default class Resume extends Component {
   }
 
   render() {
-    const company = this.props.state.company;
-    const position = this.props.state.position;
-    const workDescription = this.props.state.workDescription;
-    const workDateStarted = this.props.state.workDateStarted;
-    const workDateEnded = this.props.state.workDateEnded;
+    const {
+      company,
+      position,
+      workDescription,
+      workDateStarted,
+      workDateEnded,
+    } = this.props.state;
 
     return (
       <div className="resume-work-expi-container">

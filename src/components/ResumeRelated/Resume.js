@@ -6,19 +6,20 @@ import SchoolInfoBody from "./SchoolInfoBody";
 
 export default class Resume extends Component {
   render() {
+    const { state } = this.props;
     return (
       <div className="resume-view-container">
         <div className="resume-view-header">
-          <ResumeHeading state={this.props.state} />
+          <ResumeHeading state={state} />
         </div>
 
         <div className="resume-view-body">
           <div className="resume-view-sidebar">
-            <SideInformation state={this.props.state} />
+            <SideInformation state={state} />
           </div>
           <div className="resume-view-main-body">
-            <WorkExperienceBody state={this.props.state} />
-            <SchoolInfoBody state={this.props.state} />
+            <WorkExperienceBody state={state} />
+            <SchoolInfoBody state={state} />
           </div>
         </div>
       </div>
